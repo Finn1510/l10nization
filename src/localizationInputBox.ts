@@ -1,8 +1,9 @@
+/* eslint-disable prettier/prettier */
 import * as vscode from 'vscode';
 import * as yaml from 'yaml';
 import { ReplaceParameters } from './replaceParameters';
 
-const localizationClass = 'l10n';
+const localizationClass = 'AppLocalizations.of(context)!';
 
 async function getArbFiles(uri: vscode.Uri) {
   const l10nFile = vscode.Uri.parse(`${uri.toString()}/l10n.yaml`);
